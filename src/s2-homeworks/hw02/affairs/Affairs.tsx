@@ -10,7 +10,6 @@ type AffairsPropsType = {
     filter: FilterType
 }
 
-
 function Affairs({data, setFilter, deleteAffairCallback, filter}: AffairsPropsType) {
     const setAll = () => {
       setFilter('all')
