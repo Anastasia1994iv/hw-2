@@ -28,6 +28,7 @@ const Stand = () => {
                 {/*инпут с ошибкой:*/}
                 <div>
                     <SuperInputText
+                    className={sInput.input}
                         id={'hw4-super-input-with-error'}
                         value={stateForAllInputs}
                         onChangeText={setValue}
