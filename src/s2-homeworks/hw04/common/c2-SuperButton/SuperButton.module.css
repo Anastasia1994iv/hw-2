@@ -4,6 +4,12 @@
   padding: 5px 24px;
   border-radius: 3px;
   border: none;
+  font-family: Montserrat;
+font-size: 14px;
+font-weight: 600;
+line-height: 20px;
+text-align: center;
+
 }
 
 .disabled {
@@ -21,7 +27,9 @@
   padding: 5px 24px;
   border-radius: 3px ;
   border: 1px solid #0066CC;
-  background: #E5F0FA;
+  background-color: white;
+  color: #0066CC;
+  font-family: Montserrat;
 }
 
 .default {
@@ -31,7 +39,7 @@
   border-radius: 3px;
   background: #0066CC;
   border: none;
-
+  color: white;
 }
 
 .red {
@@ -41,6 +49,7 @@
   border-radius: 3px;
   background: #CC1439;
   border: none;
+  color: white;
 }
 
 .default:hover {
@@ -53,6 +62,8 @@
 
 .secondary:hover {
   background: #E5F0FA;
+  border: 1px solid #0066CC;
+  color: #0066CC;
 }
 
 .default:active {
