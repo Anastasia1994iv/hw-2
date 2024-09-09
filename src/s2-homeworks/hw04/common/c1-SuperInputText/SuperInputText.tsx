@@ -5,7 +5,7 @@ import React, {
     KeyboardEvent,
     ReactNode,
 } from 'react'
-
+import s from '../../Stand.module.css'
 import sInput from './SuperInputText.module.css'
 
 // тип пропсов обычного инпута
@@ -55,11 +55,11 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
     //     + (error ? ' ' + s.errorInput : ' ' + s.superInput)
     //     + (className ? ' ' + className : '') // задача на смешивание классов
 
-const finalSpanClassName = sInput.error
-+ (spanClassName ? ' ' + spanClassName : '')
-const finalInputClassName = sInput.input
-+ (error ? ' ' + sInput.errorInput : ' ' + sInput.input)
-+ (className ? ' ' + className : '') 
+    const finalSpanClassName = sInput.error
+        + (spanClassName ? ' ' + spanClassName : '')
+    const finalInputClassName = sInput.input
+        + (error ? ' ' + s.errorInput : ' ' + sInput.superInput)
+        + (className ? ' ' + className : '') // задача на смешивание классов
 
     return (
         <div className={sInput.inputWrapper}>

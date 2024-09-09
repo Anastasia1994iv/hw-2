@@ -13,6 +13,14 @@
   border: 1px solid grey;
 }
 
+.superInput {
+  width: 372px;
+  height: 36px;
+  margin-left: 40px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+
 .error {
   color: #CC1439;
   font-family: Montserrat;
