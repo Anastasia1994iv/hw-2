@@ -5,7 +5,8 @@ import React, {
     KeyboardEvent,
     ReactNode,
 } from 'react'
-import s from './SuperInputText.module.css'
+
+import sInput from './SuperInputText.module.css'
 
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>,
@@ -19,7 +20,6 @@ type SuperInputTextPropsType = Omit<DefaultInputPropsType, 'type'> & {
     onEnter?: () => void
     error?: ReactNode
     spanClassName?: string
-    
 }
 
 const SuperInputText: React.FC<SuperInputTextPropsType> = (
@@ -49,14 +49,20 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         onEnter() // то вызвать его
     }
 
-    const finalSpanClassName = s.error
-        + (spanClassName ? ' ' + spanClassName : '')
-    const finalInputClassName = s.input
-        + (error ? ' ' + s.errorInput : ' ' + s.superInput)
-        + (className ? ' ' + className : '') // задача на смешивание классов
+    // const finalSpanClassName = s.error
+    //     + (spanClassName ? ' ' + spanClassName : '')
+    // const finalInputClassName = s.input
+    //     + (error ? ' ' + s.errorInput : ' ' + s.superInput)
+    //     + (className ? ' ' + className : '') // задача на смешивание классов
+
+const finalSpanClassName = sInput.error
++ (spanClassName ? ' ' + spanClassName : '')
+const finalInputClassName = sInput.input
++ (error ? ' ' + sInput.errorInput : ' ' + sInput.input)
++ (className ? ' ' + className : '') 
 
     return (
-        <div className={s.inputWrapper}>
+        <div className={sInput.inputWrapper}>
             <input
                 id={id}
                 type={'text'}
