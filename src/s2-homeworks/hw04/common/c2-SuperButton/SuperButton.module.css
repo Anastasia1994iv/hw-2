@@ -1,14 +1,17 @@
 .button {
-  width: 132px;
+  width: 130px;
   height: 30px;
   padding: 5px 24px;
   border-radius: 3px;
   border: none;
   font-family: Montserrat;
-font-size: 14px;
-font-weight: 600;
-line-height: 20px;
-text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+  margin-right: 25px;
+  background-color: #0066CC;
+  color: white;
 
 }
 
@@ -17,20 +20,22 @@ text-align: center;
   width: 133px;
   height: 30px;
   padding: 5px 24px;
-  border-radius: 3px ;
+  border-radius: 3px;
   opacity: 0.5;
   background: #004D99;
 }
 
 .secondary {
-  width: 176px;
+  /* width: 176px; */
+  width: 130px;
   height: 30px;
   padding: 5px 24px;
-  border-radius: 3px ;
+  border-radius: 3px;
   border: 1px solid #0066CC;
   background-color: white;
   color: #0066CC;
   font-family: Montserrat;
+
 }
 
 .default {
