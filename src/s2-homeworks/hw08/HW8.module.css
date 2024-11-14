@@ -1,23 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@300;500;700&display=swap');
+
 .item {
+  border-bottom: solid 1px grey;
 }
 
 .item:last-of-type {
+  border-bottom: none;
 }
 
 .users {
+  width: 700px;
+  height: 35px;
+  top: 250px;
+  left: 70px;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: left;
+  font-weight: 300;
+  border-collapse: collapse;
 }
 
 .buttonsContainer {
+  margin: 35px auto 18px 240px;
+  display: flex;
+  gap: 10px;
 }
 
 .container {
+  margin: 35px 0px 0px 70px;
+  padding-bottom: 25px;
 }
 
 .thead {
+  background-color: #E5E5E5;
+  width: 606px;
+  height: 36px;
+  top: 248px;
+  left: 70px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
 }
 
 .nameCol {
+  height: 50px;
+  width: 300px;
+  padding-left: 20px;
 }
 
 .ageCol {
+  
 }
