@@ -2,13 +2,37 @@
 }
 
 .clock {
+  margin: 35px 0px 0px 70px;
 }
 
 .watch {
+  /* background-color: blue; */
+  width: 174;
+height: 24;
+top: 1397px;
+left: 70px;
+font-family: Montserrat;
+font-weight: 400;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+
 }
 
 .watch strong {
 }
 
 .more {
+  width: 128;
+height: 20;
+top: 225px;
+left: 70px;
+font-family: Montserrat;
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #00000080;
+margin-bottom: 25px;
+margin-top: 10px;
 }
