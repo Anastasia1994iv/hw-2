@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import s from './HW11.module.css'
 import s2 from '../../s1-main/App.module.css'
 import { restoreState } from '../hw06/localStorage/localStorage'
@@ -16,13 +16,14 @@ function HW11() {
     const [value2, setValue2] = useState(restoreState<number>('hw11-value2', 100))
 
     const change = (event: any, value: any) => {
-        // пишет студент // если пришёл массив - сохранить значения в оба useState, иначе в первый
         if (value.length) {
             setValue1(value[0]);
             setValue2(value[1]);
-        } else {
+        }
+        else {
             setValue1(value);
         }
+        // пишет студент // если пришёл массив - сохранить значения в оба useState, иначе в первый
     }
 
     return (
