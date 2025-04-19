@@ -2,61 +2,55 @@ import React, {
     SelectHTMLAttributes,
     DetailedHTMLProps,
     ChangeEvent,
-} from 'react'
-import s from './SuperSelect.module.css'
-import { ifError } from 'assert'
-
-type DefaultSelectPropsType = DetailedHTMLProps<
+  } from 'react'
+  import s from './SuperSelect.module.css'
+  
+  type DefaultSelectPropsType = DetailedHTMLProps<
     SelectHTMLAttributes<HTMLSelectElement>,
     HTMLSelectElement
->
-
-type SuperSelectPropsType = DefaultSelectPropsType & {
+  >
+  
+  type SuperSelectPropsType = DefaultSelectPropsType & {
     options?: any[]
     onChangeOption?: (option: any) => void
-}
-
-const SuperSelect: React.FC<SuperSelectPropsType> = ({
+  }
+  
+  const SuperSelect: React.FC<SuperSelectPropsType> = ({
     options,
     className,
     onChange,
     onChangeOption,
     ...restProps
-}) => {
+  }) => {
     const mappedOptions: any[] = options
-        ? options.map((o) => (
-              <option
-                  id={'hw7-option-' + o.id}
-                  className={s.option}
-                  key={o.id}
-                  value={o.id}
-              >
-                  {o.value}
-              </option>
-          ))
-        : [] // map options with key
-
-        const onChangeCallback = (e: ChangeEvent<HTMLSelectElement>) => 
-           {
-    const selectedOption = options?.find(o => o.id === Number(e.target.value));
-
-    if (onChangeOption && selectedOption) {
-        onChangeOption(selectedOption.id);
-    }
-        }
-        
-
-    const finalSelectClassName = s.select + (className ? ' ' + className : '')
-
-    return (
-        <select
-            className={finalSelectClassName}
-            onChange={onChangeCallback}
-            {...restProps}
+      ? options.map((o) => (
+        <option
+          id={'hw7-option-' + o.id}
+          className={s.option}
+          key={o.id}
+          value={o.id}
         >
-            {mappedOptions}
-        </select>
+          {o.value}
+        </option>
+      ))
+      : []
+  
+    const onChangeCallback = (e: ChangeEvent<HTMLSelectElement>) => {
+      onChange && onChange(e);
+      onChangeOption?.(+e.currentTarget.value);// делают студенты
+    }
+  
+    const finalSelectClassName = s.select + (className ? ' ' + className : '')
+  
+    return (
+      <select
+        className={finalSelectClassName}
+        onChange={onChangeCallback}
+        {...restProps}
+      >
+        {mappedOptions}
+      </select>
     )
-}
-
-export default SuperSelect
+  }
+  
+  export default SuperSelect
