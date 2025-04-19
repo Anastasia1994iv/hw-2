@@ -24,6 +24,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
 
 
     onChange(page, itemsCountForPage);
+
     // пишет студент
   }
 
